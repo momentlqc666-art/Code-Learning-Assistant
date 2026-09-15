@@ -1,4 +1,39 @@
-# Welcome to your Lovable project
+# THREXIS
+
+Threat Hunting & Real-Time Exploitation Exposure Intelligent System — an interactive Security Operations Command Center with a Next.js console and FastAPI orchestration service.
+
+## Run locally
+
+Start the backend:
+
+```sh
+python3 -m venv .venv
+.venv/bin/pip install -r backend/requirements.txt
+.venv/bin/uvicorn backend.main:app --reload --port 8000
+```
+
+In a second terminal, start the frontend:
+
+```sh
+npm install --prefix frontend
+npm run dev
+```
+
+Open `http://localhost:3000`. The API runs on `http://localhost:8000`; override it with `NEXT_PUBLIC_API_BASE_URL` when needed. An OpenAI key is optional—copy `backend/.env.example` to `backend/.env` to enable AI-refined narratives. Without a valid key, the built-in classification engine remains fully operational.
+
+## Capabilities
+
+- Five controlled attack simulations mapped to MITRE ATT&CK
+- Live matrix telemetry with visual and spoken threat alerts
+- Automated containment playbooks with step-by-step SOC execution logs
+- Downloadable, timestamped CISO incident reports
+- Deterministic local threat classification when external AI is unavailable
+
+## Legacy prototype
+
+The original Vite learning-assistant source remains under `src/` for reference. Root `dev`, `build`, and `preview` commands now target the THREXIS frontend in `frontend/`.
+
+<!--
 
 ## Project info
 
@@ -71,3 +106,4 @@ Yes, you can!
 To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
 
 Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+-->
